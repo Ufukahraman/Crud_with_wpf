@@ -1,0 +1,72 @@
+﻿<Window x:Class="crud.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:crud"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" >
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="290"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0">
+            <StackPanel Margin="5">
+                <DockPanel Margin="10">
+                    <Label Content="Name :"/>
+                    <TextBox x:Name="name_txt" HorizontalAlignment="Right" Width="200"/>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Label Content="Age : " />
+                    <TextBox x:Name="age_txt" HorizontalAlignment="Right" Width="200"/>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Label Content="Gender :" />
+                    <TextBox x:Name="gender_txt" HorizontalAlignment="Right" Width="200"/>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Label Content="City : " />
+                    <TextBox  x:Name="city_txt" HorizontalAlignment="Right" Width="200"/>
+                </DockPanel>
+            </StackPanel>
+        </Border>
+        
+        <Grid  Grid.Column="1" Grid.Row="1"  >
+            <DataGrid x:Name="datagrid" Margin="10"/>  
+        </Grid>
+        <Grid  Grid.Column="1" Grid.Row="0" >
+            <StackPanel>
+                <DockPanel>
+                    <Label Content="ID:" FontSize="18" x:Name="Id_txt" />
+                    <TextBox x:Name="search_txt"/>
+                </DockPanel>
+                <DockPanel>
+                    <Label Content="ID:" FontSize="18" x:Name="Isd_txt" />
+                    <TextBox x:Name="searchs_txt"/>
+                </DockPanel>
+            </StackPanel>
+        </Grid>
+         
+        
+        
+        <Border Grid.Row="1"  Grid.Column="0">
+            
+
+            <StackPanel Margin="15">
+                <Button Content="Insert record"  x:Name="btninsert" Width="250" Height="30" Margin="5" Click="btninsert_Click"/>
+                <Button Content="Update record" x:Name="btnupdate" Width="250" Height="30" Margin="5" Click="btnupdate_Click"/>
+                <Button Content="Delete record" x:Name="btndelete" Width="250" Height="30" Margin="5" Click="btndelete_Click"/>
+                <Button Content="Clear data" x:Name="btnclear" Width="250" Height="30" Margin="5" Click="btnclear_Click"/>
+            </StackPanel>  
+    
+        </Border>
+    </Grid>
+</Window>
